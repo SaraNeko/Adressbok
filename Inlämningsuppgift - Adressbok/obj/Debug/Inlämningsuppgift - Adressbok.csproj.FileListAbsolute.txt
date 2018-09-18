@@ -1,0 +1,10 @@
+C:\Users\saras\source\repos\Inlämningsuppgift - Adressbok\Inlämningsuppgift - Adressbok\bin\Debug\Inlämningsuppgift - Adressbok.exe.config
+C:\Users\saras\source\repos\Inlämningsuppgift - Adressbok\Inlämningsuppgift - Adressbok\bin\Debug\Inlämningsuppgift - Adressbok.exe
+C:\Users\saras\source\repos\Inlämningsuppgift - Adressbok\Inlämningsuppgift - Adressbok\bin\Debug\Inlämningsuppgift - Adressbok.pdb
+C:\Users\saras\source\repos\Inlämningsuppgift - Adressbok\Inlämningsuppgift - Adressbok\obj\Debug\Inlämningsuppgift - Adressbok.csprojAssemblyReference.cache
+C:\Users\saras\source\repos\Inlämningsuppgift - Adressbok\Inlämningsuppgift - Adressbok\obj\Debug\Inlämningsuppgift___Adressbok.Form1.resources
+C:\Users\saras\source\repos\Inlämningsuppgift - Adressbok\Inlämningsuppgift - Adressbok\obj\Debug\Inlämningsuppgift___Adressbok.Properties.Resources.resources
+C:\Users\saras\source\repos\Inlämningsuppgift - Adressbok\Inlämningsuppgift - Adressbok\obj\Debug\Inlämningsuppgift - Adressbok.csproj.GenerateResource.cache
+C:\Users\saras\source\repos\Inlämningsuppgift - Adressbok\Inlämningsuppgift - Adressbok\obj\Debug\Inlämningsuppgift - Adressbok.csproj.CoreCompileInputs.cache
+C:\Users\saras\source\repos\Inlämningsuppgift - Adressbok\Inlämningsuppgift - Adressbok\obj\Debug\Inlämningsuppgift - Adressbok.exe
+C:\Users\saras\source\repos\Inlämningsuppgift - Adressbok\Inlämningsuppgift - Adressbok\obj\Debug\Inlämningsuppgift - Adressbok.pdb
