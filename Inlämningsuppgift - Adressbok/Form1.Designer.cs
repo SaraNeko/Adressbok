@@ -34,30 +34,30 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.textBoxNamn = new System.Windows.Forms.TextBox();
+            this.textBoxGatuadress = new System.Windows.Forms.TextBox();
+            this.textBoxPostnummer = new System.Windows.Forms.TextBox();
+            this.textBoxPostort = new System.Windows.Forms.TextBox();
+            this.textBoxTelefon = new System.Windows.Forms.TextBox();
+            this.textBoxEpost = new System.Windows.Forms.TextBox();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.listBoxEntries = new System.Windows.Forms.ListBox();
+            this.buttonEdit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.buttonSearch = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.buttonShowAll = new System.Windows.Forms.Button();
+            this.buttonNew = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -130,95 +130,95 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Epost:";
             // 
-            // textBox1
+            // textBoxNamn
             // 
-            this.textBox1.Location = new System.Drawing.Point(112, 22);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 20);
-            this.textBox1.TabIndex = 6;
+            this.textBoxNamn.Location = new System.Drawing.Point(112, 22);
+            this.textBoxNamn.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxNamn.Name = "textBoxNamn";
+            this.textBoxNamn.Size = new System.Drawing.Size(202, 20);
+            this.textBoxNamn.TabIndex = 6;
             // 
-            // textBox2
+            // textBoxGatuadress
             // 
-            this.textBox2.Location = new System.Drawing.Point(112, 53);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(202, 20);
-            this.textBox2.TabIndex = 7;
+            this.textBoxGatuadress.Location = new System.Drawing.Point(112, 53);
+            this.textBoxGatuadress.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxGatuadress.Name = "textBoxGatuadress";
+            this.textBoxGatuadress.Size = new System.Drawing.Size(202, 20);
+            this.textBoxGatuadress.TabIndex = 7;
             // 
-            // textBox3
+            // textBoxPostnummer
             // 
-            this.textBox3.Location = new System.Drawing.Point(112, 85);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(202, 20);
-            this.textBox3.TabIndex = 8;
+            this.textBoxPostnummer.Location = new System.Drawing.Point(112, 85);
+            this.textBoxPostnummer.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxPostnummer.Name = "textBoxPostnummer";
+            this.textBoxPostnummer.Size = new System.Drawing.Size(202, 20);
+            this.textBoxPostnummer.TabIndex = 8;
             // 
-            // textBox4
+            // textBoxPostort
             // 
-            this.textBox4.Location = new System.Drawing.Point(112, 117);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(202, 20);
-            this.textBox4.TabIndex = 9;
+            this.textBoxPostort.Location = new System.Drawing.Point(112, 117);
+            this.textBoxPostort.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxPostort.Name = "textBoxPostort";
+            this.textBoxPostort.Size = new System.Drawing.Size(202, 20);
+            this.textBoxPostort.TabIndex = 9;
             // 
-            // textBox5
+            // textBoxTelefon
             // 
-            this.textBox5.Location = new System.Drawing.Point(112, 149);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(202, 20);
-            this.textBox5.TabIndex = 10;
+            this.textBoxTelefon.Location = new System.Drawing.Point(112, 149);
+            this.textBoxTelefon.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxTelefon.Name = "textBoxTelefon";
+            this.textBoxTelefon.Size = new System.Drawing.Size(202, 20);
+            this.textBoxTelefon.TabIndex = 10;
             // 
-            // textBox6
+            // textBoxEpost
             // 
-            this.textBox6.Location = new System.Drawing.Point(112, 180);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(202, 20);
-            this.textBox6.TabIndex = 11;
+            this.textBoxEpost.Location = new System.Drawing.Point(112, 180);
+            this.textBoxEpost.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxEpost.Name = "textBoxEpost";
+            this.textBoxEpost.Size = new System.Drawing.Size(202, 20);
+            this.textBoxEpost.TabIndex = 11;
             // 
-            // button1
+            // buttonSave
             // 
-            this.button1.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(112, 207);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 25);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Spara";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonSave.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSave.Location = new System.Drawing.Point(112, 207);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(60, 25);
+            this.buttonSave.TabIndex = 12;
+            this.buttonSave.Text = "Spara";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
-            // listBox1
+            // listBoxEntries
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(19, 21);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(270, 147);
-            this.listBox1.TabIndex = 13;
+            this.listBoxEntries.FormattingEnabled = true;
+            this.listBoxEntries.Location = new System.Drawing.Point(19, 21);
+            this.listBoxEntries.Name = "listBoxEntries";
+            this.listBoxEntries.Size = new System.Drawing.Size(270, 147);
+            this.listBoxEntries.TabIndex = 13;
             // 
-            // button2
+            // buttonEdit
             // 
-            this.button2.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.139131F);
-            this.button2.Location = new System.Drawing.Point(19, 177);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 25);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Ändra";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonEdit.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.139131F);
+            this.buttonEdit.Location = new System.Drawing.Point(19, 177);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(60, 25);
+            this.buttonEdit.TabIndex = 14;
+            this.buttonEdit.Text = "Ändra";
+            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.buttonSave);
+            this.groupBox1.Controls.Add(this.textBoxEpost);
+            this.groupBox1.Controls.Add(this.textBoxTelefon);
+            this.groupBox1.Controls.Add(this.textBoxPostort);
+            this.groupBox1.Controls.Add(this.textBoxPostnummer);
+            this.groupBox1.Controls.Add(this.textBoxGatuadress);
+            this.groupBox1.Controls.Add(this.textBoxNamn);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -248,16 +248,40 @@
             // 
             this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.button6);
+            this.groupBox2.Controls.Add(this.buttonDelete);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.listBox1);
+            this.groupBox2.Controls.Add(this.buttonEdit);
+            this.groupBox2.Controls.Add(this.listBoxEntries);
             this.groupBox2.Location = new System.Drawing.Point(353, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(308, 247);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Adresser";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.01739F);
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label12.Location = new System.Drawing.Point(89, 212);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(162, 15);
+            this.label12.TabIndex = 27;
+            this.label12.Text = "Ta bort en adress från boken";
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelete.Location = new System.Drawing.Point(19, 207);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(60, 25);
+            this.buttonDelete.TabIndex = 26;
+            this.buttonDelete.Text = "Radera";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // label8
             // 
@@ -271,30 +295,30 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "Välj en adress för att ändra";
             // 
-            // textBox7
+            // textBoxSearch
             // 
-            this.textBox7.Location = new System.Drawing.Point(19, 28);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(226, 20);
-            this.textBox7.TabIndex = 17;
+            this.textBoxSearch.Location = new System.Drawing.Point(19, 28);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(226, 20);
+            this.textBoxSearch.TabIndex = 17;
             // 
-            // button3
+            // buttonSearch
             // 
-            this.button3.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(19, 53);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(60, 25);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Sök";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonSearch.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSearch.Location = new System.Drawing.Point(19, 53);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(60, 25);
+            this.buttonSearch.TabIndex = 18;
+            this.buttonSearch.Text = "Sök";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.textBox7);
+            this.groupBox3.Controls.Add(this.buttonSearch);
+            this.groupBox3.Controls.Add(this.textBoxSearch);
             this.groupBox3.Location = new System.Drawing.Point(353, 263);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(308, 91);
@@ -314,29 +338,29 @@
             this.label7.TabIndex = 20;
             this.label7.Text = "Sök med namn eller postort";
             // 
-            // button4
+            // buttonShowAll
             // 
-            this.button4.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(18, 51);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(60, 25);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "Återställ";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonShowAll.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonShowAll.Location = new System.Drawing.Point(18, 51);
+            this.buttonShowAll.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonShowAll.Name = "buttonShowAll";
+            this.buttonShowAll.Size = new System.Drawing.Size(60, 25);
+            this.buttonShowAll.TabIndex = 20;
+            this.buttonShowAll.Text = "Återställ";
+            this.buttonShowAll.UseVisualStyleBackColor = true;
+            this.buttonShowAll.Click += new System.EventHandler(this.buttonShowAll_Click);
             // 
-            // button5
+            // buttonNew
             // 
-            this.button5.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(18, 21);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(60, 25);
-            this.button5.TabIndex = 21;
-            this.button5.Text = "Ny";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.buttonNew.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNew.Location = new System.Drawing.Point(18, 21);
+            this.buttonNew.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonNew.Name = "buttonNew";
+            this.buttonNew.Size = new System.Drawing.Size(60, 25);
+            this.buttonNew.TabIndex = 21;
+            this.buttonNew.Text = "Ny";
+            this.buttonNew.UseVisualStyleBackColor = true;
+            this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
             // 
             // label10
             // 
@@ -367,38 +391,14 @@
             this.groupBox4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Controls.Add(this.button5);
-            this.groupBox4.Controls.Add(this.button4);
+            this.groupBox4.Controls.Add(this.buttonNew);
+            this.groupBox4.Controls.Add(this.buttonShowAll);
             this.groupBox4.Location = new System.Drawing.Point(12, 265);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(335, 89);
             this.groupBox4.TabIndex = 25;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Alternativ";
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(19, 207);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(60, 25);
-            this.button6.TabIndex = 26;
-            this.button6.Text = "Radera";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.01739F);
-            this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label12.Location = new System.Drawing.Point(89, 212);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(162, 15);
-            this.label12.TabIndex = 27;
-            this.label12.Text = "Ta bort en adress från boken";
             // 
             // Adressbok
             // 
@@ -432,30 +432,30 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBoxNamn;
+        private System.Windows.Forms.TextBox textBoxGatuadress;
+        private System.Windows.Forms.TextBox textBoxPostnummer;
+        private System.Windows.Forms.TextBox textBoxPostort;
+        private System.Windows.Forms.TextBox textBoxTelefon;
+        private System.Windows.Forms.TextBox textBoxEpost;
+        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.ListBox listBoxEntries;
+        private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button buttonShowAll;
+        private System.Windows.Forms.Button buttonNew;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button buttonDelete;
     }
 }
 

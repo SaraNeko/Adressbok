@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.IO;
 
@@ -8,125 +7,177 @@ namespace Inlämningsuppgift___Adressbok
 {
     public partial class Adressbok : Form
     {
-        Regex SPLIT_REGEX = new Regex(", ");
         static string SAVE_FILE_PATH = "Adressbok.txt";
+
         static string WINDOW_TITLE = "Adressbok";
+
+        List<AddressBookEntry> entries = new List<AddressBookEntry>();
+
+        AddressBookEntry entryBeingEdited = null;
+               
 
         public Adressbok()
         {
+            if (!File.Exists(SAVE_FILE_PATH)) { File.Create(SAVE_FILE_PATH).Dispose(); }
+
             InitializeComponent();
             this.Text = WINDOW_TITLE;
+
+            LoadEntriesFromSaveFile();
             PopulateListBox();
         }
 
-        void SparaAdress(string namn, string gatuadress, string postnummer,
-            string postort, string telefon, string epost)
+        /* Load all the address book entries from the save file. */
+        private void LoadEntriesFromSaveFile()
         {
-            StreamWriter sw = new StreamWriter(SAVE_FILE_PATH, true);
-            sw.WriteLine($"{namn}, {gatuadress}, {postnummer}, {postort}, {telefon}, {epost}");
-            sw.Close();
+            StreamReader streamReader = new StreamReader(SAVE_FILE_PATH);
+            string line = "";
+            while ((line = streamReader.ReadLine()) != null)
+            {
+                AddressBookEntry entry = new AddressBookEntry(line);
+                entries.Add(entry);
+            }
+            streamReader.Close();
+        }
+
+        /* Save all the address book entries to the save file. */
+        private void SaveEntriesToSaveFile()
+        {
+            StreamWriter streamWriter = new StreamWriter(SAVE_FILE_PATH, false);
+            foreach (AddressBookEntry entry in entries)
+            {
+                streamWriter.WriteLine(entry.ToString());
+            }
+            streamWriter.Close();
+        }
+
+        /* Populate the entries list box with all the saved address book entries. */
+        private void PopulateListBox()
+        {
+            textBoxSearch.Text = ""; // Clear search box since we're going to show all entries.
+
+            listBoxEntries.Items.Clear();
+            foreach (AddressBookEntry entry in entries)
+            {
+                listBoxEntries.Items.Add(entry.ToString());
+            }
+        }
+
+        /* Save an address book entry with the given information. */
+        private void SparaAdress(string namn, string gatuadress, string postnummer, string postort, string telefon, string epost)
+        {
+            if (entryBeingEdited != null)
+            {
+                entries.Remove(entryBeingEdited);
+                entryBeingEdited = null;
+            }
+
+            AddressBookEntry entry = new AddressBookEntry(namn, gatuadress, postnummer, postort, telefon, epost);
+            entries.Add(entry);
+
+            SaveEntriesToSaveFile();
+            PopulateListBox();
+            ClearInformationTextBoxes();
+        }
+
+        /* Delete the entry represented by the given string. */
+        private void DeleteEntry(string requestedEntry)
+        {
+            entries.Remove(FindEntryByString(requestedEntry));
+
+            SaveEntriesToSaveFile();
             PopulateListBox();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        /* Find the entry represented by the given string. */
+        private AddressBookEntry FindEntryByString(string requestedEntry)
         {
-            string namn = textBox1.Text;
-            string gatuadress = textBox2.Text;
-            string postnummer = textBox3.Text;
-            string postort = textBox4.Text;
-            string telefon = textBox5.Text;
-            string epost = textBox6.Text;
+            foreach (AddressBookEntry entry in entries)
+            {
+                if (entry.ToString() == requestedEntry)
+                {
+                    return entry;
+                }
+            }
+            throw new Exception($"Entry '{requestedEntry}' not found.");
+        }
+
+        /* Clear the information entry text boxes. */
+        private void ClearInformationTextBoxes()
+        {
+            textBoxNamn.Clear();
+            textBoxGatuadress.Clear();
+            textBoxPostnummer.Clear();
+            textBoxPostort.Clear();
+            textBoxTelefon.Clear();
+            textBoxEpost.Clear();
+        }
+
+
+        /* Event methods */
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            string namn = textBoxNamn.Text;
+            string gatuadress = textBoxGatuadress.Text;
+            string postnummer = textBoxPostnummer.Text;
+            string postort = textBoxPostort.Text;
+            string telefon = textBoxTelefon.Text;
+            string epost = textBoxEpost.Text;
+
+            if (namn == "" || gatuadress == "" || postnummer == "" || postort == "" || telefon == "" || epost == "")
+            {
+                return;  // Don't allow saving if a text box is empty.
+            }
+
             SparaAdress(namn, gatuadress, postnummer, postort, telefon, epost);
         }
 
-        List<string> LaddaAdresser()
+        private void buttonEdit_Click(object sender, EventArgs e)
         {
-            List<string> adressbok = new List<string>();
-            StreamReader sr = new StreamReader(SAVE_FILE_PATH);
-            string rad = "";
-            while ((rad = sr.ReadLine()) != null)
-            {
-                adressbok.Add(rad);
-            }
-            sr.Close();
-            return adressbok;
+            string selected = (string)listBoxEntries.SelectedItem;
+            if (selected == null) { return; }  // Don't allow editing if no entry is selected.
+
+            entryBeingEdited = FindEntryByString(selected);
+
+            textBoxNamn.Text = entryBeingEdited.Namn;
+            textBoxGatuadress.Text = entryBeingEdited.Gatuadress;
+            textBoxPostnummer.Text = entryBeingEdited.Postnummer;
+            textBoxPostort.Text = entryBeingEdited.Postort;
+            textBoxTelefon.Text = entryBeingEdited.Telefon;
+            textBoxEpost.Text = entryBeingEdited.Epost;
         }
 
-        private void PopulateListBox() {
-            listBox1.Items.Clear();
-            foreach (string adress in LaddaAdresser())
-            {
-                listBox1.Items.Add(adress);
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonSearch_Click(object sender, EventArgs e)
         {
-            string entry = (string)listBox1.SelectedItem;
-            if (entry == null) { return; }  // Don't allow editing if no entry is selected.
-
-            string[] information = SPLIT_REGEX.Split(entry);
-            textBox1.Text = information[0];
-            textBox2.Text = information[1];
-            textBox3.Text = information[2];
-            textBox4.Text = information[3];
-            textBox5.Text = information[4];
-            textBox6.Text = information[5];
-            deleteEntry(entry);
-        }
-
-        private void deleteEntry(string requestedEntry) {
-            List<string> adressbok = LaddaAdresser();
-
-            StreamWriter sw = new StreamWriter(SAVE_FILE_PATH, false);
-            foreach (string entry in adressbok) {
-                if (entry != requestedEntry)
-                {                    
-                    sw.WriteLine(entry);
-                }
-            }
-            sw.Close();
-            PopulateListBox();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            string searchString = textBox7.Text.ToLower();
+            string searchString = textBoxSearch.Text.ToLower();
             PopulateListBox();  // Re-populate the list box in case a previous search is still in effect.
-            for (int i = listBox1.Items.Count - 1; i >= 0; i--)
+            foreach (AddressBookEntry entry in entries)
             {
-                string entry = (string) listBox1.Items[i];
-                string[] information = SPLIT_REGEX.Split(entry);
-                string namn = information[0];
-                string postort = information[3];
-
-                if (!(namn.ToLower().Contains(searchString) || postort.ToLower().Contains(searchString)))
+                if (!(entry.Namn.ToLower().Contains(searchString) || entry.Postort.ToLower().Contains(searchString)))
                 {
-                    listBox1.Items.RemoveAt(i);
+                    listBoxEntries.Items.Remove(entry.ToString());
                 }
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonShowAll_Click(object sender, EventArgs e)
         {
-            textBox7.Text = "";
             PopulateListBox();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void buttonNew_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Clear();
+            entryBeingEdited = null;
+            ClearInformationTextBoxes();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void buttonDelete_Click(object sender, EventArgs e)
         {
-            string selected = (string)listBox1.SelectedItem;
-            deleteEntry(selected);
+            string selected = (string)listBoxEntries.SelectedItem;
+            if (selected == null) { return; }  // Don't allow deleting if no entry is selected.
+
+            DeleteEntry(selected);
         }
     }
 }
